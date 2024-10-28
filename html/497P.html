@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.main{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        div.line{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: 0.1px solid rgba(82, 82, 82, 0.26);
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        document.write('<div class="main">');
+        var i,j;
+        for(i=1;i<10;i++){
+            document.write('<div class="line">');
+            document.write(`<h3>${i}단</h3>`);
+            for(j=1;j<10;j++){
+                document.write(`${i} X ${j} = ${i*j} <br>`);
+            }
+            document.write('</div>');
+        }
+        document.write('</div');
+    </script>
+</body>
+</html>
