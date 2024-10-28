@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>507P</title>
+    <style>
+    table {
+        border: 0.1px solid rgba(85, 85, 85, 0.295);
+        border-collapse: collapse;
+    }
+    td {
+        border: 0.1px solid rgba(85, 85, 85, 0.295);
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        var i, j;
+        var Attendant = prompt("입장객은 몇 명인가요?");
+        var col = prompt("한 줄에 몇 명씩 앉습니까?");
+
+        if (Attendant % col === 0){
+            row = parseInt(Attendant / col);
+        }
+        else{
+            row = parseInt(Attendant / col) + 1;
+        }
+
+
+        document.write("<table>");
+        for (i = 0; i < row; i++) {
+        document.write("<tr>");
+            for (j = 1; j <= col; j++) {
+                seatNo = i * col + j;
+                if(seatNo > Attendant){
+                 break;  
+                }
+            document.write("<td> 좌석 " + seatNo + " </td>"); 
+            }
+        document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
