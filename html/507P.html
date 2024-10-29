@@ -18,9 +18,9 @@
 <body>
     <h1>자리 배치도</h1>
     <script>
-        var i, j;
-        var Attendant = prompt("입장객은 몇 명인가요?");
-        var col = prompt("한 줄에 몇 명씩 앉습니까?");
+        let i, j;
+        let Attendant = prompt("입장객은 몇 명인가요?");
+        let col = prompt("한 줄에 몇 명씩 앉습니까?");
 
         if (Attendant % col === 0){
             row = parseInt(Attendant / col);
@@ -31,9 +31,9 @@
 
 
         document.write("<table>");
-        for (i = 0; i < row; i++) {
+        for (let i = 0; i < row; i++) {
         document.write("<tr>");
-            for (j = 1; j <= col; j++) {
+            for (let j = 1; j <= col; j++) {
                 seatNo = i * col + j;
                 if(seatNo > Attendant){
                  break;  
